@@ -1,7 +1,5 @@
 import styles from '../../styles/Home.module.css'
 import Button from '../common/Button'
-import graphics1 from '../../public/graphics/Graphics 1.svg'
-import Image from 'next/image'
 
 export default function HomeSection() {
   return (
@@ -14,7 +12,6 @@ export default function HomeSection() {
       </div>
       <div className={styles.rightColumn}>
       </div>
-      <Image src={graphics1} className={styles.graphics1}/>
     </section>
   )
 }

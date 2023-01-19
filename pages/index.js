@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import AboutSection from '../components/sections/AboutSection';
 import HomeSection from '../components/sections/HomeSection';
 import styles from '../styles/Home.module.css';
 
@@ -12,6 +13,7 @@ export default function Home() {
 
       <main className={styles.container}>
         <HomeSection/>
+        <AboutSection/>
       </main>
 
       <footer>
