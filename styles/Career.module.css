@@ -1,0 +1,78 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.graphics2, .graphics3 {
+  position: absolute;
+  z-index: 0;
+  width: 10rem;
+}
+
+.graphics2 {
+  top: 0;
+  left: 0;
+}
+
+.graphics3 {
+  bottom: 0;
+  right: 0;
+}
+
+.sectionTitle {
+  color: black;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.twoColumns {
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+
+.leftColumn {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-right: 2rem;
+}
+
+
+.leftColumn::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  display: block;
+  width: 1px;
+  background-color: var(--ligh-gray);
+  height: 100%;
+}
+
+.rightColumn {
+  width: 75%;
+  padding-left: 2rem;
+  color: #333;
+}
+
+.jobTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.period {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #777;
+}

@@ -9,10 +9,10 @@ export default function AboutSection() {
 
   return (
     <section id="about" className={styles.container}>
-      <Image src={graphics1} className={styles.graphics1}/>
+      <Image src={graphics1} className={styles.graphics1} alt="graphics"/>
       <Card>
         <Image src={avatar} alt="avatar"/>
-        <h4>About me</h4>
+        <h4 className={styles.cardTitle}>About me</h4>
         <div className={styles.content}>
           <p>{aboutMe}</p>
         </div>

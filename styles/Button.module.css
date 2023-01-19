@@ -5,7 +5,7 @@
   font-weight: 400;
 }
 
-.btn:hover {
+.btn:hover, .btnText:hover {
   cursor: pointer;
 }
 
@@ -24,14 +24,38 @@
   background-color: var(--primary-light);
 }
 
-.btn.lg {
+.lg {
   width: 400px;
   height: 70px;
   font-size: 1.5rem;
 }
 
-.btn.md {
+.md {
   width: 150px;
   height: 50px;
   font-size: 1.25rem;
 }
+
+.btnText {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  height: auto;
+}
+
+.btnText.primary  {
+  color: var(--primary);
+  transition: color 0.3s;
+}
+
+.btnText.primary:hover, .btnText.primary.active {
+  color: var(--primary-dark);
+}
+
+.btnText.primary:disabled {
+  color: var(--primary-light);
+}
+

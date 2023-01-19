@@ -9,6 +9,7 @@
   --tertiary-light: #FEF2C1;
   --tertiary-dark: #9E8939;
   --text-secondary: #4f4f4f;
+  --ligh-gray: #ddd;
 }
 
 html,
@@ -51,7 +52,7 @@ button {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: bold;
 }
 
