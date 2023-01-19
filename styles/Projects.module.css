@@ -1,0 +1,60 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.twoColumns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 5rem 0;
+}
+
+.imageColumn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descriptionColumn {
+  width: 50%;
+  padding: 0 4rem;
+}
+
+.descriptionColumn h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.url {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.description {
+  margin-top: 2rem;
+}
+
+.graphics4, .graphics5 {
+  position: absolute;
+  z-index: 0;
+  width: 5rem;
+}
+
+.graphics4 {
+  top: 25%;
+  left: 0;
+}
+
+.graphics5 {
+  bottom: 25%;
+  right: 0;
+}
+
