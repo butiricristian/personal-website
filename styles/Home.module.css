@@ -89,3 +89,32 @@
     flex-direction: column;
   }
 }
+
+.twoColumns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  margin-top: -4rem;
+}
+
+.rightColumn, .leftColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 3rem;
+  z-index: 10;
+}
+
+.leftColumn h3 {
+  margin: 1rem 0;
+}
+
+.graphics1 {
+  position: absolute;
+  z-index: 0;
+  top: 20%;
+  right: 0;
+  min-width: 100%;
+  max-width: none;
+}
