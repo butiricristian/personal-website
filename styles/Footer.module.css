@@ -1,0 +1,53 @@
+.container {
+  min-height: 100vh;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+.graphics8 {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  align-items: center;
+}
+
+.content h1 {
+  font-weight: 400;
+  margin: 20rem 0 5rem;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 0;
+  width: 300px;
+}
+
+.copyright {
+  flex-grow: 1;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.copyright h4 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 400;
+}

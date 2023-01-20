@@ -6,6 +6,7 @@
   align-items: center;
   width: 100%;
   position: relative;
+  padding: 0 10rem;
 }
 
 .twoColumns {
@@ -56,5 +57,12 @@
 .graphics5 {
   bottom: 25%;
   right: 0;
+}
+
+.sectionTitle {
+  color: black;
+  font-weight: 500;
+  font-size: 3rem;
+  margin: 5rem 0;
 }
 

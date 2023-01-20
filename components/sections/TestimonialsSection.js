@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
   const ratingRenderer = (numberOfStars) => {
     const stars = [];
     for (let i = 0; i < numberOfStars; i++) {
-      stars.push(<Image style={{width: '50px', margin: '5px'}} src={star} alt="star" key={`star-${i}`}/>);
+      stars.push(<Image style={{width: '30px', margin: '5px'}} src={star} alt="star" key={`star-${i}`}/>);
     }
 
     return stars;
@@ -41,8 +41,8 @@ export default function TestimonialsSection() {
   const testimonialRenderer = (testimonial, index) => {
     return (
       <div style={{width: '800px', display: 'flex', justifyContent: 'center'}}>
-        <Card width="600px" height="80vh" key={`testimonial-${index}`}>
-          <Image width="50px" src={testimonial.avatar} alt="avatar" />
+        <Card width="500px" height="70vh" key={`testimonial-${index}`}>
+          <Image width={110} src={testimonial.avatar} alt="avatar" />
           <h4 className={styles.author}>{testimonial.author}</h4>
           <h5 className={styles.role}>{testimonial.role}</h5>
           <p className={styles.description}>{testimonial.description}</p>

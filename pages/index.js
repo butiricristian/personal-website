@@ -2,6 +2,7 @@ import Head from "next/head";
 import Separator from "../components/common/Separator";
 import AboutSection from "../components/sections/AboutSection";
 import CareerSection from "../components/sections/CareerSection";
+import FooterSection from "../components/sections/FooterSection";
 import HomeSection from "../components/sections/HomeSection";
 import ProjectsSection from "../components/sections/ProjectsSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
@@ -22,6 +23,8 @@ export default function Home() {
         <CareerSection />
         <ProjectsSection />
         <TestimonialsSection />
+        <Separator height="20vh" />
+        <FooterSection />
       </main>
 
       <footer></footer>
