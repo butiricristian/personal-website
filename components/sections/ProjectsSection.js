@@ -59,8 +59,8 @@ export default function ProjectsSection() {
         {project.url && <a href={project.url} className={styles.url} target="_blank">{project.url}</a>}
         <p className={styles.description}>
           {project.description}
-          <List items={project.items} />
         </p>
+        <List items={project.items} />
       </div>
     );
 

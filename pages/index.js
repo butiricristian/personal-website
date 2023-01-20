@@ -4,6 +4,7 @@ import AboutSection from "../components/sections/AboutSection";
 import CareerSection from "../components/sections/CareerSection";
 import HomeSection from "../components/sections/HomeSection";
 import ProjectsSection from "../components/sections/ProjectsSection";
+import TestimonialsSection from "../components/sections/TestimonialsSection";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <Separator height="20vh" />
         <CareerSection />
         <ProjectsSection />
+        <TestimonialsSection />
       </main>
 
       <footer></footer>
