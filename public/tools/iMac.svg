@@ -1,9 +1,10 @@
 <svg width="460" height="394" viewBox="0 0 460 394" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_32_244)">
-<rect x="20" y="12" width="420" height="222" rx="5" fill="#FF5753"/>
-<circle cx="230" cy="256" r="5" fill="black"/>
-<rect x="22.5" y="14.5" width="415" height="265" rx="3.5" stroke="black" stroke-width="5"/>
+<rect x="22.5" y="14.5" width="415" height="265" rx="3.5" fill="white" stroke="black" stroke-width="5"/>
+<path d="M168.66 350.929H183.093H276.907H291.34L300 363H160L168.66 350.929Z" fill="white"/>
 <path d="M199.33 278L183.093 350.929M183.093 350.929H168.66L160 363H300L291.34 350.929H276.907M183.093 350.929H276.907M260.67 278L276.907 350.929" stroke="black" stroke-width="5"/>
+<rect x="25" y="17" width="410" height="211" fill="#FF5753"/>
+<circle cx="230" cy="256" r="5" fill="black"/>
 </g>
 <defs>
 <filter id="filter0_d_32_244" x="0" y="0" width="460" height="393.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

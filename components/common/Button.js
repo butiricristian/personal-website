@@ -8,13 +8,13 @@ export default function Button(props) {
 }
 
 function ButtonFilled(props) {
-  const { to = "#", style, color = "primary", size = "md", children, onClick } = props;
+  const { href = "#", style, color = "primary", size = "md", children, onClick, className } = props;
 
   return (
     <button
-      href={to}
+      href={href}
       style={style}
-      className={clsx(styles.btn, styles[color], styles[size])}
+      className={clsx(styles.btn, styles[color], styles[size], className)}
       onClick={onClick}
     >
       {children}
@@ -24,7 +24,7 @@ function ButtonFilled(props) {
 
 function ButtonText(props) {
   const {
-    to = "#",
+    href = "",
     style,
     color = "primary",
     size = "md",
@@ -34,16 +34,23 @@ function ButtonText(props) {
     className
   } = props;
 
+  const handleClick = (e) => {
+    if (!href) {
+      e.preventDefault()
+      onClick()
+    }
+  }
+
   return (
-    <button
-      href={to}
+    <a
+      href={href}
       style={style}
       className={clsx(styles.btnText, styles[color], styles[size], className, {
         [styles.active]: active,
       })}
-      onClick={onClick}
+      onClick={handleClick}
     >
       {children}
-    </button>
+    </a>
   );
 }

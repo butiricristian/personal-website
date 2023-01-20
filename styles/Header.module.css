@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 35px rgba(102, 102, 102, 0.12);
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: top 0.3s ease-in-out;
+}
+
+.separator {
+  flex-grow: 1;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  font-weight: 700;
+  text-align: center;
+  width: auto !important;
+}
+
+.contact {
+  font-size: 1rem !important;
+}
+
+.logo, .navLink, .contact {
+  margin: 0 1rem !important;
+  letter-spacing: 0.2px;
+}

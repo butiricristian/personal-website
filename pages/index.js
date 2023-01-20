@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "../components/common/Header";
 import Separator from "../components/common/Separator";
 import AboutSection from "../components/sections/AboutSection";
 import CareerSection from "../components/sections/CareerSection";
@@ -15,6 +16,8 @@ export default function Home() {
         <title>Cristian Butiri - Senior Software Engineer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header />
 
       <main className={styles.container}>
         <HomeSection />
