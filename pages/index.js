@@ -23,7 +23,6 @@ export default function Home() {
         <CareerSection />
         <ProjectsSection />
         <TestimonialsSection />
-        <Separator height="20vh" />
         <FooterSection />
       </main>
 

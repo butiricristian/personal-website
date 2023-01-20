@@ -74,3 +74,17 @@ p {
   font-weight: 200;
   color: var(--text-secondary);
 }
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}

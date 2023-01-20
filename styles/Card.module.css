@@ -8,4 +8,17 @@
   padding: 2rem 4rem;
   flex-direction: column;
   z-index: 10;
+  margin: 5rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    padding: 2rem 2rem;
+  }
 }

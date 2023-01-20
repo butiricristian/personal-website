@@ -40,8 +40,8 @@ export default function TestimonialsSection() {
 
   const testimonialRenderer = (testimonial, index) => {
     return (
-      <div style={{width: '800px', display: 'flex', justifyContent: 'center'}}>
-        <Card width="500px" height="70vh" key={`testimonial-${index}`}>
+      <div style={{display: 'flex', justifyContent: 'center', margin: '0 2rem'}} key={`testimonial-${index}`}>
+        <Card maxWidth="500px">
           <Image width={110} src={testimonial.avatar} alt="avatar" />
           <h4 className={styles.author}>{testimonial.author}</h4>
           <h5 className={styles.role}>{testimonial.role}</h5>

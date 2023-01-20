@@ -31,13 +31,14 @@ function ButtonText(props) {
     children,
     onClick,
     active,
+    className
   } = props;
 
   return (
     <button
       href={to}
       style={style}
-      className={clsx(styles.btnText, styles[color], styles[size], {
+      className={clsx(styles.btnText, styles[color], styles[size], className, {
         [styles.active]: active,
       })}
       onClick={onClick}
