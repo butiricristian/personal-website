@@ -2,7 +2,7 @@ import styles from "../../styles/Drawer.module.css";
 import { LINKS } from "./Header";
 import Button from "./Button";
 
-const DRAWER_WIDTH = 400;
+const DRAWER_WIDTH = 320;
 
 export default function Drawer({ show, setShow }) {
   const navMapper = ({ title, href }) => {
@@ -12,10 +12,8 @@ export default function Drawer({ show, setShow }) {
         type="text"
         href={href}
         className={styles.navLink}
-        onClick={() => {
-          console.log("Clicked link");
-          setShow(false);
-        }}
+        onClick={() => setShow(false)}
+        underline
       >
         {title}
       </Button>
@@ -24,24 +22,12 @@ export default function Drawer({ show, setShow }) {
 
   return (
     <div
-      className={styles.overlay}
-      onClick={() => setShow(false)}
-      style={{
-        backgroundColor: show ? "rgba(0, 0, 0, 0.8)" : "transparent",
-        zIndex: show ? 2 : -1,
-        display: show ? "block" : "hide",
-      }}
+      className={styles.drawer}
+      style={{ right: show ? 0 : -DRAWER_WIDTH, width: DRAWER_WIDTH, zIndex: 120 }}
     >
-      <div
-        className={styles.drawer}
-        style={{ right: show ? 0 : -DRAWER_WIDTH, width: DRAWER_WIDTH }}
-      >
-        {/* <div className={styles.closeButtonContainer}>
-        </div> */}
-        <div className={styles.container}>
-          {LINKS.map(navMapper)}
-          <Button className={styles.contact}>Contact</Button>
-        </div>
+      <div className={styles.container}>
+        {LINKS.map(navMapper)}
+        <Button className={styles.contact}>Contact</Button>
       </div>
     </div>
   );

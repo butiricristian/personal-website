@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .twoColumns {
@@ -12,6 +13,8 @@
   flex: 1 0 auto;
   min-height: 100vh;
   padding: 0 2rem;
+  justify-content: center;
+  position: relative;
 }
 
 .rightColumn, .leftColumn {
@@ -23,11 +26,39 @@
 
 .leftColumn h3 {
   margin: 1rem 0;
+  z-index: 10;
+}
+
+.leftColumn {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.rightColumn {
+  align-items: flex-end;
+  z-index: 5;
+}
+
+.image {
+  display: none;
 }
 
 @media only screen and (min-width: 992px) {
   .twoColumns {
     min-height: 90vh;
-    padding: 0 4rem;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .image {
+    width: 45%;
+    max-width: 1000px;
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    z-index: 0;
+    display: block;
   }
 }

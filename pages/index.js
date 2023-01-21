@@ -8,8 +8,12 @@ import HomeSection from "../components/sections/HomeSection";
 import ProjectsSection from "../components/sections/ProjectsSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import styles from "../styles/Home.module.css";
+import { useState } from "react";
+import Overlay from "../components/common/Overlay";
 
 export default function Home() {
+  const [showDrawer, setShowDrawer] = useState(false);
+
   return (
     <div>
       <Head>
@@ -17,12 +21,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Overlay show={showDrawer} setShow={setShowDrawer} />
+      <Header showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
 
       <main className={styles.container}>
         <HomeSection />
         <AboutSection />
-        <Separator height="20vh" />
         <CareerSection />
         <ProjectsSection />
         <TestimonialsSection />

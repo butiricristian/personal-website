@@ -24,21 +24,19 @@ function ButtonFilled(props) {
 
 function ButtonText(props) {
   const {
-    href = "",
+    href = "javascript:void(0)",
     style,
     color = "primary",
     size = "md",
     children,
     onClick,
     active,
-    className
+    className,
+    underline
   } = props;
 
   const handleClick = (e) => {
-    if (!href) {
-      e.preventDefault()
-      onClick()
-    }
+    onClick && onClick()
   }
 
   return (
@@ -47,6 +45,7 @@ function ButtonText(props) {
       style={style}
       className={clsx(styles.btnText, styles[color], styles[size], className, {
         [styles.active]: active,
+        [styles.underline]: underline,
       })}
       onClick={handleClick}
     >

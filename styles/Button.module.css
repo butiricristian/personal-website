@@ -45,6 +45,7 @@
   margin: 0;
   font-size: 1rem;
   height: auto;
+  position: relative;
 }
 
 .btnText.primary  {
@@ -58,6 +59,24 @@
 
 .btnText.primary:disabled {
   color: var(--primary-light);
+}
+
+.btnText.underline::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  content: '';
+  width: 0;
+  background-color: var(--primary);
+  transition: width .3s, background-color .3s;
+}
+
+.btnText.underline:hover::after {
+  width: 100%;
+  transition: width .3s;
+  content: '';
+  background-color: var(--primary-dark);
 }
 
 @media only screen and (max-width: 768px) {

@@ -3,8 +3,8 @@ import Button from "./Button";
 import Image from "next/image";
 import logo from "../../public/Cristian B..svg";
 import { useState, useEffect } from "react";
-import Drawer from "./Drawer";
 import clsx from "clsx";
+import Drawer from "./Drawer";
 
 export const LINKS = [
   { title: "Home", href: "#home" },
@@ -14,10 +14,10 @@ export const LINKS = [
   { title: "Testimonials", href: "#testimonials" },
 ];
 
-export default function Header() {
+export default function Header({ showDrawer, setShowDrawer }) {
   const navMapper = ({ title, href }) => {
     return (
-      <Button key={href} type="text" href={href} className={styles.navLink}>
+      <Button underline key={href} type="text" href={href} className={styles.navLink}>
         {title}
       </Button>
     );
@@ -39,23 +39,33 @@ export default function Header() {
     setVisible(visible);
   }
 
-  const [showDrawer, setShowDrawer] = useState(false)
+  const BurgerButton = (
+    <div className={styles.burgerContainer} style={{ top: visible || showDrawer ? 0 : "-100px"}}>
+      <div
+        id={styles["nav-icon3"]}
+        onClick={() => setShowDrawer(!showDrawer)}
+        className={clsx({ [styles.open]: showDrawer })}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  )
 
   return (
-    <nav className={styles.container} style={{ top: visible ? 0 : "-100px" }}>
-      <Image src={logo} alt="Logo" className={styles.logo} />
-      <div className={styles.separator} />
-      <div className={styles.navContainer}>
-        {LINKS.map(navMapper)}
-        <Button className={styles.contact}>Contact</Button>
-      </div>
-      <div id={styles["nav-icon3"]} onClick={() => setShowDrawer(!showDrawer)} className={clsx({[styles.open]: showDrawer})}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <Drawer show={showDrawer} setShow={setShowDrawer}/>
-    </nav>
+    <>
+      <nav className={styles.container} style={{ top: visible ? 0 : "-100px", zIndex: 30}}>
+        <Image src={logo} alt="Logo" className={styles.logo} />
+        <div className={styles.separator} />
+        <div className={styles.navContainer}>
+          {LINKS.map(navMapper)}
+          <Button className={styles.contact}>Contact</Button>
+        </div>
+      </nav>
+      {BurgerButton}
+      <Drawer show={showDrawer} setShow={setShowDrawer} />
+    </>
   );
 }

@@ -1,5 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import Button from '../common/Button'
+import development from '../../public/Development2.svg'
+import Image from 'next/image'
 
 export default function HomeSection() {
   return (
@@ -11,6 +13,7 @@ export default function HomeSection() {
         <Button style={{marginTop: '4rem'}} size="lg">Get in touch</Button>
       </div>
       <div className={styles.rightColumn}>
+        <Image src={development} alt="development" className={styles.image}/>
       </div>
     </section>
   )
