@@ -11,14 +11,14 @@ function ButtonFilled(props) {
   const { href = "#", style, color = "primary", size = "md", children, onClick, className } = props;
 
   return (
-    <button
+    <a
       href={href}
       style={style}
       className={clsx(styles.btn, styles[color], styles[size], className)}
       onClick={onClick}
     >
       {children}
-    </button>
+    </a>
   );
 }
 

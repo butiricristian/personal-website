@@ -11,7 +11,7 @@ export default function HomeSection() {
         <h3>Hi, my name is</h3>
         <h1>Cristian Butiri</h1>
         <h4>Let's grow your business into the digital world</h4>
-        <Button style={{ marginTop: "4rem" }} size="lg">
+        <Button href="mailto:butiri.cristian@gmail.com" style={{ marginTop: "4rem" }} size="lg">
           Get in touch
         </Button>
       </div>

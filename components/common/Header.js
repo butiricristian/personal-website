@@ -61,7 +61,7 @@ export default function Header({ showDrawer, setShowDrawer }) {
         <div className={styles.separator} />
         <div className={styles.navContainer}>
           {LINKS.map(navMapper)}
-          <Button className={styles.contact}>Contact</Button>
+          <Button href="mailto:butiri.cristian@gmail.com" className={styles.contact}>Contact</Button>
         </div>
       </nav>
       {BurgerButton}

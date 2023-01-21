@@ -14,11 +14,11 @@ export default function ProjectsSection() {
       url: "https://draw-cells.netlify.app",
       image: iMac,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a lorem et neque porttitor vehicula. Suspendisse a tellus tempus, ultricies purus ac, fermentum tellus:",
+        "A project co-founded by me and my friend Jane who is a PhD at Oxford. The aim of the platform is to make presentations easier and less time consuming for scientists",
       items: [
-        "Praesent elementum nisi eget leo finibus, sit amet placerat torto",
-        "Nam sit amet scelerisque felis, porta tempus augue. Nulla nunc purus, pharetra eget porttitor a, bibendum sit amet lacus",
-        "Nunc nisi turpis, bibendum id dignissim ac, porta non mi. Nam venenatis dolor nibh, vitae tempus risus convallis sit amet",
+        "Was built with React 17+ and currently has a Firebase back-end",
+        "Uses Konva as a canvas library allowing users to drag and drop, resize and do all kinds of customizations for their sprites",
+        "Uses React Spring 4 as an animation tool",
       ],
     },
     {
@@ -26,11 +26,11 @@ export default function ProjectsSection() {
       url: "",
       image: macbook,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a lorem et neque porttitor vehicula. Suspendisse a tellus tempus, ultricies purus ac, fermentum tellus:",
+        "Flourish was created as a replacement for a company's service that used to manage campaigns and offers for mobile games and apps. The project was designed and built by me to help the company I was working for with their business",
       items: [
-        "Praesent elementum nisi eget leo finibus, sit amet placerat torto",
-        "Nam sit amet scelerisque felis, porta tempus augue. Nulla nunc purus, pharetra eget porttitor a, bibendum sit amet lacus",
-        "Nunc nisi turpis, bibendum id dignissim ac, porta non mi. Nam venenatis dolor nibh, vitae tempus risus convallis sit amet",
+        "Created with Ruby on Rails 6 for the back-end and React for the front-end",
+        "Integrated with a legacy systems by using AWS's SQS queing system",
+        "Built a real-time notification system for the users to know when their offers or campaings stopped working",
       ],
     },
     {
@@ -38,11 +38,11 @@ export default function ProjectsSection() {
       url: "",
       image: apiImage,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a lorem et neque porttitor vehicula. Suspendisse a tellus tempus, ultricies purus ac, fermentum tellus:",
+        "As a participant in Toptal's Node.js accelerator program, I was assigned with building 2 demo eCommerce services: a user authentication service and a product management service",
       items: [
-        "Praesent elementum nisi eget leo finibus, sit amet placerat torto",
-        "Nam sit amet scelerisque felis, porta tempus augue. Nulla nunc purus, pharetra eget porttitor a, bibendum sit amet lacus",
-        "Nunc nisi turpis, bibendum id dignissim ac, porta non mi. Nam venenatis dolor nibh, vitae tempus risus convallis sit amet",
+        "The user service was built using Node.js, Express and Auth0 as an authentication server",
+        "The products service was created with Node.js, Nest and MongoDB as a database",
+        "Both services were exposing REST APIs documented with the help of Swagger",
       ],
     },
   ];
