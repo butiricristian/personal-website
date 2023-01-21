@@ -6,4 +6,5 @@
 
 .list li {
   margin: 0.4rem 0;
+  color: var(--text-tertiary)
 }

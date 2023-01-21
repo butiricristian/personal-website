@@ -42,6 +42,7 @@
 
 .description {
   margin-top: 2rem;
+  color: var(--text-tertiary)
 }
 
 .graphics4, .graphics5 {
