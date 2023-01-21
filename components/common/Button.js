@@ -24,7 +24,7 @@ function ButtonFilled(props) {
 
 function ButtonText(props) {
   const {
-    href = "javascript:void(0)",
+    href = "",
     style,
     color = "primary",
     size = "md",
@@ -36,6 +36,7 @@ function ButtonText(props) {
   } = props;
 
   const handleClick = (e) => {
+    if (!href) e.preventDefault()
     onClick && onClick()
   }
 

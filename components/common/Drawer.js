@@ -5,7 +5,7 @@ import Button from "./Button";
 const DRAWER_WIDTH = 320;
 
 export default function Drawer({ show, setShow }) {
-  const navMapper = ({ title, href }) => {
+  const navMapper = ({ title, href }, index) => {
     return (
       <Button
         key={href}
@@ -14,6 +14,10 @@ export default function Drawer({ show, setShow }) {
         className={styles.navLink}
         onClick={() => setShow(false)}
         underline
+        style={{
+          transition: `transform 0.3s ease ${(index+1) * 0.03}s`,
+          transform: `translate(${show ? 0 : DRAWER_WIDTH}px)`
+        }}
       >
         {title}
       </Button>
@@ -27,7 +31,15 @@ export default function Drawer({ show, setShow }) {
     >
       <div className={styles.container}>
         {LINKS.map(navMapper)}
-        <Button className={styles.contact}>Contact</Button>
+        <Button
+          className={styles.contact}
+          style={{
+            transition: `transform 0.3s ease ${(LINKS.length) * 0.03}s`,
+            transform: `translate(${show ? 0 : DRAWER_WIDTH}px)`
+          }}
+        >
+          Contact
+        </Button>
       </div>
     </div>
   );

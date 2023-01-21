@@ -4,5 +4,5 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  transition: background-color 0.3s, display 0.3s;
+  transition: background-color 0.3s, display 0.3s, z-index 0.3s;
 }

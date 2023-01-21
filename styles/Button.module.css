@@ -25,6 +25,21 @@
   background-color: var(--primary-light);
 }
 
+.btn.secondary {
+  color: white;
+  background-color: var(--secondary);
+  transition: background-color 0.3s;
+  border: solid 1px white;
+}
+
+.btn.secondary:hover {
+  background-color: var(--secondary-dark);
+}
+
+.btn.secondary:disabled {
+  background-color: var(--secondary-light);
+}
+
 .lg {
   width: 400px;
   height: 70px;

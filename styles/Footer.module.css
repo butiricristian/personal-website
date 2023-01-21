@@ -62,6 +62,11 @@
 
   .social {
     margin: 3rem 0;
+    width: 200px;
+  }
+
+  .social img {
+    width: 2rem;
   }
 
   .copyright {
