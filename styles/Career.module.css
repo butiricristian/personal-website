@@ -66,6 +66,7 @@
   padding-left: 2rem;
   color: #333;
   position: relative;
+  overflow: hidden;
 }
 
 .jobTitle {
@@ -143,4 +144,11 @@
 
 @media only screen and (max-width: 992px) {
 
+}
+
+.descriptionContainer {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
 }

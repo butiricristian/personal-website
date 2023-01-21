@@ -5,10 +5,11 @@ import graphics3 from "../../public/graphics/Graphics 3.svg";
 import Image from "next/image";
 import Button from "../common/Button";
 import { useState } from "react";
-import clsx from 'clsx'
+import clsx from "clsx";
 
 export default function CareerSection() {
   const [crtIndex, setCrtIndex] = useState(0);
+
   const jobs = [
     {
       name: "Freelancing via Toptal @&Open",
@@ -62,18 +63,37 @@ export default function CareerSection() {
     );
   };
 
+  const jobDescriptionMapper = (job, index) => {
+    const translate = `${(index - crtIndex) * 500}px`;
+    const duration = 0.8
+
+    return (
+      <div
+        className={styles.descriptionContainer}
+        style={{
+          transform: `translateY(${translate})`,
+          transition: `transform ${duration}s ease-in-out`,
+        }}
+      >
+        {job.description}
+      </div>
+    );
+  }
+
   return (
     <section id="career" className={styles.container}>
       <h4 className={styles.sectionTitle}>Career</h4>
       <div className={clsx(styles.container, styles.cardContainer)}>
-        <Image src={graphics2} className={styles.graphics2} alt="graphics"/>
-        <Image src={graphics3} className={styles.graphics3} alt="graphics"/>
+        <Image src={graphics2} className={styles.graphics2} alt="graphics" />
+        <Image src={graphics3} className={styles.graphics3} alt="graphics" />
         <Card height="auto">
           <div className={styles.twoColumns}>
             <div className={styles.scrollContainer}>
               <div className={styles.leftColumn}>{jobs.map(jobMapper)}</div>
             </div>
-            <div className={styles.rightColumn}>{jobs[crtIndex].description}</div>
+            <div className={styles.rightColumn}>
+              {jobs.map(jobDescriptionMapper)}
+            </div>
           </div>
         </Card>
       </div>
