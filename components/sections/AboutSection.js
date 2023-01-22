@@ -12,18 +12,13 @@ export default function AboutSection() {
     <>
       {t('aboutMe.0')}
       <br/><br/>
-      Afterwards I started experimenting with Java and worked on 2 eCommerce projects, one using Spring Boot and Hibernate
-      and one using SAP Hybris. However, after about a year and a half, I returned to my first love: Ruby 😄.
+      {t('aboutMe.1')}
       <br/><br/>
-      I've worked for 2 years on a huge Golf Tournament Management System helping me become a true Senior Engineer
-      and even being promoted to a management position inside the company for a short while.
+      {t('aboutMe.2')}
       <br/><br/>
-      Lately I've discovered freelancing and my goal slowly became helping business owners build solid web systems
-      that would finally allow them more time for their personal lives while also increasing their revenues.
-      So far I've worked with businesses in the US as well as in Ireland and all the feedback I received
-      was extremely positive.
+      {t('aboutMe.3')}
       <br/><br/>
-      So let's get in touch and start working on the business and life of your dreams 🚀
+      {t('aboutMe.4')}
     </>
   )
 

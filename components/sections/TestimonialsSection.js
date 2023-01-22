@@ -4,32 +4,12 @@ import avatar from "../../public/Avatar.png";
 import star from "../../public/Star.svg";
 import styles from "../../styles/Testimonials.module.css";
 import Card from "../common/Card";
+import { useTranslation } from "next-i18next";
 
 export default function TestimonialsSection() {
-  const testimonials = [
-    {
-      avatar: avatar,
-      author: "Ziv Gonen",
-      role: "VP of Engineering @Influnece Mobile",
-      description:
-        "I personally worked with Cristian during the first half of the project to \
-        launch and further improve the application. Cristian exhibited a unique \
-        combination of business, product and engineering skills, creating compelling \
-        UX and UI while maintaining a strong architecture and speedy performance. \
-        Cristian has great communication skills and is a delight to work with. I would \
-        definitely recommend Cristian and would love to work with him again in the \
-        future.",
-      rating: 5,
-    },
-    {
-      avatar: avatar,
-      author: "Fintan Fairmichael",
-      role: "Director of Engineering @&Open",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis risus erat. Donec ut justo id quam vulputate tincidunt. Quisque vitae dui a justo aliquet condimentum et id est. In bibendum dignissim nisl, vitae auctor orci ultrices non. Quisque sit amet semper dui. Nullam rhoncus pellentesque urna, id malesuada odio.",
-      rating: 5,
-    },
-  ];
+  const { t } = useTranslation();
+  const testimonials = t("testimonials", { returnObjects: true });
+  const images = { avatar };
 
   const ratingRenderer = (numberOfStars) => {
     const stars = [];
@@ -54,7 +34,7 @@ export default function TestimonialsSection() {
         key={`testimonial-${index}`}
       >
         <Card maxWidth="500px">
-          <Image width={110} src={testimonial.avatar} alt="avatar" />
+          <Image width={110} src={images[testimonial.avatar]} alt="avatar" />
           <h4 className={styles.author}>{testimonial.author}</h4>
           <h5 className={styles.role}>{testimonial.role}</h5>
           <p className={styles.description}>
