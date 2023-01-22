@@ -29,7 +29,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Cristian Butiri - Senior Software Engineer</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/CB.ico" />
       </Head>
 
       <LoadingScreen />
