@@ -19,8 +19,12 @@ export default function LoadingScreen() {
       }
   }, [])
 
+  function dismissScreen() {
+    setHideLoading(true)
+  }
+
   return (
-    <div className={clsx(styles.container, {[styles.active]: hideLoading})}>
+    <div className={clsx(styles.container, {[styles.active]: hideLoading})} onClick={dismissScreen}>
       <Signature className={clsx({active: active})}/>
     </div>
   )

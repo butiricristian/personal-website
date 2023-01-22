@@ -13,6 +13,7 @@ export const LINKS = [
   { title: "career", href: "#career" },
   { title: "projects", href: "#projects" },
   { title: "testimonials", href: "#testimonials" },
+  { title: "resume", href: "/resume.pdf" },
 ];
 
 export default function Header({ showDrawer, setShowDrawer }) {
