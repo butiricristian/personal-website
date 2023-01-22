@@ -15,6 +15,7 @@
   padding: 0 2rem;
   justify-content: center;
   position: relative;
+  margin-top: 2rem;
 }
 
 .rightColumn, .leftColumn {
@@ -42,6 +43,12 @@
 
 .image {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .twoColumns {
+    min-height: 70vh;
+  }
 }
 
 @media only screen and (min-width: 992px) {

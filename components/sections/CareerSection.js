@@ -100,7 +100,7 @@ export default function CareerSection() {
   };
 
   const jobDescriptionMapper = (job, index) => {
-    const translate = `${(index - crtIndex) * 500}px`;
+    const translate = `${(index - crtIndex) * 200}vh`;
     const duration = 0.8
 
     return (

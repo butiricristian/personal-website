@@ -55,9 +55,13 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .container {
+    min-height: 70vh;
+  }
+
   .content h1 {
-    margin: 10rem 0 3rem;
-    font-size: 3.5rem;
+    margin: 2rem 0 3rem;
+    font-size: 3rem;
   }
 
   .social {
@@ -78,8 +82,8 @@
   }
 
   .graphics8 {
-    height: 120vh;
-    min-height: 60rem;
+    height: 70vh;
+    min-height: 55rem;
   }
 }
 
@@ -89,7 +93,7 @@
   }
 
   .content h1 {
-    margin: 10rem 0 3rem;
+    margin: 3rem 0;
     font-size: 3.5rem;
   }
 
@@ -104,7 +108,7 @@
   }
 
   .content h1 {
-    margin: 10rem 0 3rem;
+    margin: 5rem 0 3rem;
     font-size: 3.5rem;
   }
 
