@@ -105,6 +105,7 @@ export default function CareerSection() {
 
     return (
       <div
+        key={`job-description-${index}`}
         className={styles.descriptionContainer}
         style={{
           transform: `translateY(${translate})`,
@@ -121,8 +122,8 @@ export default function CareerSection() {
     <section id="career" className={styles.container}>
       <h4 className={styles.sectionTitle}>Career</h4>
       <div className={clsx(styles.container, styles.cardContainer)}>
-        <Image src={graphics2} className={styles.graphics2} alt="graphics" />
-        <Image src={graphics3} className={styles.graphics3} alt="graphics" />
+        <Image priority src={graphics2} className={styles.graphics2} alt="graphics" />
+        <Image priority src={graphics3} className={styles.graphics3} alt="graphics" />
         <Card height="auto">
           <div className={styles.twoColumns}>
             <div className={styles.scrollContainer}>

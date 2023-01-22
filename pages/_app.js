@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import { DM_Sans } from '@next/font/google'
+import { appWithTranslation } from 'next-i18next'
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
@@ -7,10 +8,12 @@ const dmSans = DM_Sans({
   subsets: ['latin']
 })
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <div className={dmSans.className}>
       <Component {...pageProps} />
     </div>
   )
 }
+
+export default appWithTranslation(App)

@@ -4,7 +4,6 @@ import avatar from "../../public/Avatar.png";
 import star from "../../public/Star.svg";
 import styles from "../../styles/Testimonials.module.css";
 import Card from "../common/Card";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function TestimonialsSection() {
   const testimonials = [
