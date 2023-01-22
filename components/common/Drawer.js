@@ -40,6 +40,7 @@ export default function Drawer({ show, setShow }) {
             transition: `transform 0.3s ease ${(LINKS.length) * 0.03}s`,
             transform: `translate(${show ? 0 : DRAWER_WIDTH}px)`
           }}
+          href="mailto:butiri.cristian@gmail.com"
         >
           Contact
         </Button>
