@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className={styles.container} id="testimonials">
-      <h4 className={styles.sectionTitle}>Testimonials</h4>
+      <h4 className={styles.sectionTitle}>{t('header.testimonials')}</h4>
       <div className={styles.carouselContainer}>
         {testimonials.map(testimonialRenderer)}
       </div>

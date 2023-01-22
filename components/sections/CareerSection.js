@@ -55,7 +55,7 @@ export default function CareerSection() {
 
   return (
     <section id="career" className={styles.container}>
-      <h4 className={styles.sectionTitle}>Career</h4>
+      <h4 className={styles.sectionTitle}>{t('header.career')}</h4>
       <div className={clsx(styles.container, styles.cardContainer)}>
         <Image priority src={graphics2} className={styles.graphics2} alt="graphics" />
         <Image priority src={graphics3} className={styles.graphics3} alt="graphics" />

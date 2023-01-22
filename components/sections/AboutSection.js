@@ -10,15 +10,15 @@ export default function AboutSection() {
   const { t } = useTranslation(['translation'])
   const aboutMe = (
     <>
-      {t('aboutMe.0')}
+      {t('aboutMe.text.0')}
       <br/><br/>
-      {t('aboutMe.1')}
+      {t('aboutMe.text.1')}
       <br/><br/>
-      {t('aboutMe.2')}
+      {t('aboutMe.text.2')}
       <br/><br/>
-      {t('aboutMe.3')}
+      {t('aboutMe.text.3')}
       <br/><br/>
-      {t('aboutMe.4')}
+      {t('aboutMe.text.4')}
     </>
   )
 
@@ -27,7 +27,7 @@ export default function AboutSection() {
       <Image priority src={graphics1} className={styles.graphics1} alt="graphics"/>
       <Card>
         <Image src={avatar2} alt="avatar" className={styles.avatar} />
-        <h4 className={styles.cardTitle}>Let me introduce myself</h4>
+        <h4 className={styles.cardTitle}>{t('aboutMe.title')}</h4>
         <div className={styles.content}>
           <p>{aboutMe}</p>
         </div>

@@ -1,10 +1,13 @@
 import styles from "../../styles/Drawer.module.css";
 import { LINKS } from "./Header";
 import Button from "./Button";
+import { useTranslation } from "next-i18next";
 
 const DRAWER_WIDTH = 320;
 
 export default function Drawer({ show, setShow }) {
+  const { t } = useTranslation();
+
   const navMapper = ({ title, href }, index) => {
     return (
       <Button
@@ -19,7 +22,7 @@ export default function Drawer({ show, setShow }) {
           transform: `translate(${show ? 0 : DRAWER_WIDTH}px)`
         }}
       >
-        {title}
+        {t(`header.${title}`)}
       </Button>
     );
   };

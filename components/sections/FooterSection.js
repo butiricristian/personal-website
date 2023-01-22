@@ -6,15 +6,18 @@ import github from "../../public/social/Github.svg";
 import figma from "../../public/social/Figma.svg";
 import styles from "../../styles/Footer.module.css";
 import Button from "../common/Button";
+import { useTranslation } from "next-i18next";
 
 export default function FooterSection() {
+  const { t } = useTranslation()
+
   return (
     <section className={styles.container} id="footer">
-      <Image src={graphics8} alt="graphics" className={styles.graphics8} />
+      <Image priority src={graphics8} alt="graphics" className={styles.graphics8} />
       <div className={styles.content}>
-        <h1>Want to digitalize your business?</h1>
+        <h1>{t('footer.want_to_digitalize_your_business')}</h1>
         <Button href="mailto:butiri.cristian@gmail.com" size="lg">
-          Let's get in touch
+          {t('footer.lets_get_in_touch')}
         </Button>
         <div className={styles.social}>
           <a href="https://www.facebook.com/butiri.cristian">
@@ -31,7 +34,7 @@ export default function FooterSection() {
           </a>
         </div>
         <div className={styles.copyright}>
-          <h4>Made by Cristian Butiri © 2023</h4>
+          <h4>{t('footer.made_by')}</h4>
         </div>
       </div>
     </section>

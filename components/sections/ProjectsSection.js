@@ -52,7 +52,7 @@ export default function ProjectsSection() {
 
   return (
     <section className={styles.container} id="projects">
-      <h4 className={styles.sectionTitle}>Projects</h4>
+      <h4 className={styles.sectionTitle}>{t('header.projects')}</h4>
       {projects.map(projectRenderer)}
       <Image src={graphics4} alt="graphics" className={styles.graphics4} />
       <Image src={graphics5} alt="graphics" className={styles.graphics5} />
