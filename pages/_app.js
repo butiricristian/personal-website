@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import "../styles/Animation.css";
 import { DM_Sans } from '@next/font/google'
 import { appWithTranslation } from 'next-i18next'
 

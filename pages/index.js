@@ -10,6 +10,7 @@ import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import Overlay from "../components/common/Overlay";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import LoadingScreen from "../components/loading/LoadingScreen";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -31,6 +32,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <LoadingScreen />
       <Overlay show={showDrawer} setShow={setShowDrawer} />
       <Header showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
 

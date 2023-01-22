@@ -2,7 +2,6 @@ import styles from "../../styles/Home.module.css";
 import Button from "../common/Button";
 import development from "../../public/Development2.svg";
 import Image from "next/image";
-import "../../styles/Animation.module.css";
 import { useTranslation } from "next-i18next";
 
 export default function HomeSection() {

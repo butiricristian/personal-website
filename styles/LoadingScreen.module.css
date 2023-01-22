@@ -1,0 +1,30 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(8.6px);
+}
+
+.container.active {
+  -webkit-animation: slideout 1.0s forwards; /* for less modern browsers */
+        animation: slideout 1.0s forwards;
+}
+
+@keyframes slideout {
+  15% {
+    transform: translate(0, 10vh);
+  }
+  to {
+    transform: translate(0, -100vh);
+  }
+}
