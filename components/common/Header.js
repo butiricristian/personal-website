@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import clsx from "clsx";
 import Drawer from "./Drawer";
 import { useTranslation } from "next-i18next";
+import { useAppContext } from "../context/state";
 
 export const LINKS = [
   { title: "home", href: "#home" },
@@ -16,8 +17,9 @@ export const LINKS = [
   { title: "resume", href: "/resume.pdf" },
 ];
 
-export default function Header({ showDrawer, setShowDrawer }) {
+export default function Header() {
   const { t } = useTranslation();
+  const { showDrawer, setShowDrawer } = useAppContext();
 
   const navMapper = ({ title, href }) => {
     return (

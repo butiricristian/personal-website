@@ -23,8 +23,6 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Home() {
-  const [showDrawer, setShowDrawer] = useState(false);
-
   return (
     <div>
       <Head>
@@ -33,8 +31,8 @@ export default function Home() {
       </Head>
 
       <LoadingScreen />
-      <Overlay show={showDrawer} setShow={setShowDrawer} />
-      <Header showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
+      <Overlay />
+      <Header />
 
       <main className={styles.container}>
         <HomeSection />
