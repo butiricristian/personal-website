@@ -36,6 +36,8 @@
 
 .modalContent {
   padding: 0rem 3rem 3rem;
+  max-height: calc(85vh - 10rem);
+  overflow: auto;
 }
 
 @media only screen and (max-width: 600px) {

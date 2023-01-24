@@ -20,9 +20,26 @@ export default function TestimonialsSection() {
   useEffect(() => {
     if (typeof window == undefined) return;
 
-    if(window.matchMedia('(max-width: 768px)').matches) setSlidesPerView(1)
-    if(window.matchMedia('(min-width: 768px)').matches) setSlidesPerView(2)
-    if(window.matchMedia('(min-width: 1500px)').matches) setSlidesPerView(3)
+    const mql1 = window.matchMedia('(max-width: 992px)')
+    const mql2 = window.matchMedia('(min-width: 992px)')
+    const mql3 = window.matchMedia('(min-width: 1500px)')
+
+    const handler = () => {
+      if(mql1.matches) setSlidesPerView(1)
+      if(mql2.matches && !mql3.matches) setSlidesPerView(2)
+      if(mql3.matches) setSlidesPerView(3)
+    }
+    handler()
+
+    mql1.addEventListener('change', handler)
+    mql2.addEventListener('change', handler)
+    mql3.addEventListener('change', handler)
+
+    return () => {
+      mql1.removeEventListener('change')
+      mql2.removeEventListener('change')
+      mql3.removeEventListener('change')
+    }
 
   }, [])
 
@@ -60,7 +77,7 @@ export default function TestimonialsSection() {
           modules={[Navigation, Pagination, Scrollbar]}
           slidesPerView={slidesPerView}
           spaceBetween={50}
-          style={{ width: "100%", margin: "0", maxWidth: '2000px' }}
+          style={{ width: "100%", padding: "0 3rem", maxWidth: '2000px' }}
           navigation
           pagination={{ clickable: true }}
           centeredSlides={true}

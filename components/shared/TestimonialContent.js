@@ -41,16 +41,14 @@ export function Description({ description, onViewMoreClick, viewAll }) {
   };
 
   return (
-    <>
-      <em>
-        {`${description.substring(0, MAX_DESCRIPTION_LENGTH)}... `}
-        <span>
-          <a href="#" className={styles.viewMore} onClick={handleClick}>
-            View More
-          </a>
-        </span>
-      </em>
-    </>
+    <em>
+      {`${description.substring(0, MAX_DESCRIPTION_LENGTH)}... `}
+      <span>
+        <a href="#" className={styles.viewMore} onClick={handleClick}>
+          View More
+        </a>
+      </span>
+    </em>
   );
 }
 
