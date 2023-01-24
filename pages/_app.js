@@ -1,3 +1,6 @@
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import '../styles/globals.css';
 import "../styles/Animation.css";
 import { DM_Sans } from '@next/font/google'

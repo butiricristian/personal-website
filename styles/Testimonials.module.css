@@ -46,10 +46,6 @@
     margin-top: 0;
   }
 
-  .container {
-    padding: 0 1rem;
-  }
-
   .graphics6 {
     top: -10vh;
     left: 0;
@@ -66,10 +62,6 @@
   .carouselContainer {
     flex-direction: column;
     margin-top: 0;
-  }
-
-  .container {
-    padding: 0 1rem;
   }
 
   .graphics6 {

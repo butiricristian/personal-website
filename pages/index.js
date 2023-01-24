@@ -9,7 +9,6 @@ import TestimonialsSection from "../components/sections/TestimonialsSection";
 import styles from "../styles/Home.module.css";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import LoadingScreen from "../components/loading/LoadingScreen";
-import Overlay from '../components/common/Overlay'
 
 export async function getStaticProps({ locale }) {
   return {

@@ -144,6 +144,14 @@
       "description":
         "Cristian is a true full stack developer with a high level of skill through the entire stack from the frontend ReactJS code, right down to the backend/database and everything in between. In a company where we have teams split between Frontend and Backend, this was an impressive feat! Every line of code he wrote was to an extremely high standard. He contributed so much to our codebase over the course of a few months, it really was impressive. Not only was his code quality excellent, but also his ability to take a sometimes vague user request, understand the ask, and turn it into well refined development tasks that we could all progress with together as a team to meet the original request. It's been such a pleasure to work with you, hopefully our paths will cross again in the future! Wishing you all the best on your next adventure.",
       "rating": 5
+    },
+    {
+      "avatar": "jane",
+      "author": "Jane Pernes",
+      "role": "PhD Student @University of Oxford",
+      "description":
+        "I have personally known Cristian for over 12 years, and can attest that he has always been an incredibly driven and focused individual. As co-founders, we have been working together in a professional manner for over a year. His knowledge, resourcefulness and  dedication are truly impressive. He has always strived for excellence in every task he took on. It’s been such a privilege to have been working together.",
+      "rating": 5
     }
   ],
   "footer": {

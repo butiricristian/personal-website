@@ -77,6 +77,14 @@ p {
   color: var(--text-tertiary);
 }
 
+.swiper-button-next, .swiper-button-prev {
+  color: var(--primary)
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 4rem;

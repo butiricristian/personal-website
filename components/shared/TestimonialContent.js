@@ -3,10 +3,11 @@ import Image from "next/image";
 import avatar from "../../public/Avatar.png";
 import ziv from "../../public/testimonials/Ziv.png";
 import john from "../../public/testimonials/John.png";
+import jane from "../../public/testimonials/Jane.png";
 import star from "../../public/Star.svg";
 
 export default function TestimonialContent({ testimonial, onViewMoreClick, viewAll }) {
-  const images = { avatar, ziv, john };
+  const images = { avatar, ziv, john, jane };
 
   return (
     <div className={styles.container}>
