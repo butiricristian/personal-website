@@ -7,6 +7,7 @@ import clsx from "clsx";
 import Drawer from "./Drawer";
 import { useTranslation } from "next-i18next";
 import { useAppContext } from "../context/state";
+import ContactButton from "../shared/ContactButton";
 
 export const LINKS = [
   { title: "home", href: "#home" },
@@ -14,14 +15,13 @@ export const LINKS = [
   { title: "career", href: "#career" },
   { title: "projects", href: "#projects" },
   { title: "testimonials", href: "#testimonials" },
-  { title: "resume", href: "/resume.pdf" },
+  { title: "resume", href: "/resume.pdf", target: '_blank' },
 ];
 
 export default function Header() {
   const { t } = useTranslation();
-  const { showDrawer, setShowDrawer } = useAppContext();
 
-  const navMapper = ({ title, href }) => {
+  const navMapper = ({ title, href, target }) => {
     return (
       <Button
         underline
@@ -29,6 +29,7 @@ export default function Header() {
         type="text"
         href={href}
         className={styles.navLink}
+        target={target}
       >
         {t(`header.${title}`)}
       </Button>
@@ -51,24 +52,6 @@ export default function Header() {
     setVisible(visible);
   }
 
-  const BurgerButton = (
-    <div
-      className={styles.burgerContainer}
-      style={{ top: visible || showDrawer ? 0 : "-100px" }}
-    >
-      <div
-        id={styles["nav-icon3"]}
-        onClick={() => setShowDrawer(!showDrawer)}
-        className={clsx({ [styles.open]: showDrawer })}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  );
-
   return (
     <>
       <nav
@@ -79,16 +62,12 @@ export default function Header() {
         <div className={styles.separator} />
         <div className={styles.navContainer}>
           {LINKS.map(navMapper)}
-          <Button
-            href="mailto:butiri.cristian@gmail.com"
-            className={styles.contact}
-          >
+          <ContactButton className={styles.contact} >
             Contact
-          </Button>
+          </ContactButton>
         </div>
       </nav>
-      {BurgerButton}
-      <Drawer show={showDrawer} setShow={setShowDrawer} />
+      <Drawer burgerButtonProps={{visible}}/>
     </>
   );
 }

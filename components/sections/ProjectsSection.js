@@ -17,7 +17,7 @@ export default function ProjectsSection() {
   const projectRenderer = (project, index) => {
     const img = (
       <div className={styles.imageColumn}>
-        <Image src={images[project.image]} alt="device" />
+        <Image priority src={images[project.image]} alt="device" />
       </div>
     );
     const description = (
@@ -54,8 +54,8 @@ export default function ProjectsSection() {
     <section className={styles.container} id="projects">
       <h4 className={styles.sectionTitle}>{t('header.projects')}</h4>
       {projects.map(projectRenderer)}
-      <Image src={graphics4} alt="graphics" className={styles.graphics4} />
-      <Image src={graphics5} alt="graphics" className={styles.graphics5} />
+      <Image priority src={graphics4} alt="graphics" className={styles.graphics4} />
+      <Image priority src={graphics5} alt="graphics" className={styles.graphics5} />
     </section>
   );
 }

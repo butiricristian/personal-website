@@ -5,7 +5,7 @@ import linkedin from "../../public/social/LinkedIn.svg";
 import github from "../../public/social/Github.svg";
 import figma from "../../public/social/Figma.svg";
 import styles from "../../styles/Footer.module.css";
-import Button from "../common/Button";
+import ContactButton from "../shared/ContactButton";
 import { useTranslation } from "next-i18next";
 
 export default function FooterSection() {
@@ -16,9 +16,9 @@ export default function FooterSection() {
       <Image priority src={graphics8} alt="graphics" className={styles.graphics8} />
       <div className={styles.content}>
         <h1>{t('footer.want_to_digitalize_your_business')}</h1>
-        <Button href="mailto:butiri.cristian@gmail.com" size="lg">
+        <ContactButton size="lg">
           {t('footer.lets_get_in_touch')}
-        </Button>
+        </ContactButton>
         <div className={styles.social}>
           <a href="https://www.facebook.com/butiri.cristian">
             <Image src={facebook} alt="facebook" />

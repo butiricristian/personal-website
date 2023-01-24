@@ -1,6 +1,8 @@
 import Image from "next/image";
 import graphics6 from "../../public/graphics/Graphics 6.svg";
 import avatar from "../../public/Avatar.png";
+import ziv from "../../public/testimonials/Ziv.png";
+import john from "../../public/testimonials/John.png";
 import star from "../../public/Star.svg";
 import styles from "../../styles/Testimonials.module.css";
 import Card from "../common/Card";
@@ -9,7 +11,7 @@ import { useTranslation } from "next-i18next";
 export default function TestimonialsSection() {
   const { t } = useTranslation();
   const testimonials = t("testimonials", { returnObjects: true });
-  const images = { avatar };
+  const images = { avatar, ziv, john };
 
   const ratingRenderer = (numberOfStars) => {
     const stars = [];

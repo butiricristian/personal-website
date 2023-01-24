@@ -32,7 +32,8 @@ function ButtonText(props) {
     onClick,
     active,
     className,
-    underline
+    underline,
+    target
   } = props;
 
   const handleClick = (e) => {
@@ -49,6 +50,7 @@ function ButtonText(props) {
         [styles.underline]: underline,
       })}
       onClick={handleClick}
+      target={target}
     >
       {children}
     </a>

@@ -6,13 +6,17 @@ export function AppWrapper({ children }) {
   const [hideLoading, setHideLoading] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [overlayClickHandler, setOverlayClickHandler] = useState(false);
+
   let sharedState = {
     hideLoading,
     setHideLoading,
     showDrawer,
     setShowDrawer,
     showOverlay,
-    setShowOverlay
+    setShowOverlay,
+    overlayClickHandler,
+    setOverlayClickHandler
   }
 
   return (

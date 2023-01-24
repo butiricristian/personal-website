@@ -1,0 +1,27 @@
+.contactContainer {
+  border: solid 1px #333;
+  margin: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.contactContainer:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.contactContainer h5 {
+  color: #333;
+  margin: 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.modalTitle {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+}

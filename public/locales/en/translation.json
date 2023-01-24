@@ -130,7 +130,7 @@
   ],
   "testimonials": [
     {
-      "avatar": "avatar",
+      "avatar": "ziv",
       "author": "Ziv Gonen",
       "role": "VP of Engineering @Influnece Mobile",
       "description":
@@ -138,11 +138,11 @@
       "rating": 5
     },
     {
-      "avatar": "avatar",
-      "author": "Fintan Fairmichael",
-      "role": "Director of Engineering @&Open",
+      "avatar": "john",
+      "author": "John Farrel",
+      "role": "Lead Software Engineer @&Open",
       "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis risus erat. Donec ut justo id quam vulputate tincidunt. Quisque vitae dui a justo aliquet condimentum et id est. In bibendum dignissim nisl, vitae auctor orci ultrices non. Quisque sit amet semper dui. Nullam rhoncus pellentesque urna, id malesuada odio.",
+        "Cristian is a true full stack developer with a high level of skill through the entire stack from the frontend ReactJS code, right down to the backend/database and everything in between. In a company where we have teams split between Frontend and Backend, this was an impressive feat! Every line of code he wrote was to an extremely high standard. He contributed so much to our codebase over the course of a few months, it really was impressive. Not only was his code quality excellent, but also his ability to take a sometimes vague user request, understand the ask, and turn it into well refined development tasks that we could all progress with together as a team to meet the original request. It's been such a pleasure to work with you, hopefully our paths will cross again in the future! Wishing you all the best on your next adventure.",
       "rating": 5
     }
   ],

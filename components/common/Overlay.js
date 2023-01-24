@@ -1,13 +1,9 @@
 import styles from '../../styles/Overlay.module.css'
-import { useAppContext } from '../context/state'
 
-export default function Overlay() {
-  const { showOverlay, setShowOverlay, showDrawer, setShowDrawer } = useAppContext()
-  const show = showOverlay || showDrawer
-
+export default function Overlay({showOverlay, setShowOverlay, onClick, zIndex=100}) {
   const handleClick = () => {
     setShowOverlay(false)
-    setShowDrawer(false)
+    onClick && onClick()
   }
 
   return (
@@ -15,9 +11,9 @@ export default function Overlay() {
       className={styles.overlay}
       onClick={handleClick}
       style={{
-        backgroundColor: show ? "rgba(0, 0, 0, 0.8)" : "transparent",
-        zIndex: show ? 100 : -1,
-        display: show ? "block" : "hide",
+        backgroundColor: showOverlay ? "rgba(0, 0, 0, 0.8)" : "transparent",
+        zIndex: zIndex,
+        visibility: showOverlay ? "visible" : "hidden",
       }}
     ></div>
   )

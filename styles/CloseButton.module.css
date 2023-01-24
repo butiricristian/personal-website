@@ -1,0 +1,12 @@
+.closeButton svg line {
+  stroke: #999;
+  transition: all .3s;
+}
+
+.closeButton:hover svg line {
+  stroke: #333
+}
+
+.closeButton:hover {
+  cursor: pointer;
+}

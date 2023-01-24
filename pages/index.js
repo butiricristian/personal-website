@@ -7,10 +7,9 @@ import HomeSection from "../components/sections/HomeSection";
 import ProjectsSection from "../components/sections/ProjectsSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
-import Overlay from "../components/common/Overlay";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import LoadingScreen from "../components/loading/LoadingScreen";
+import Overlay from '../components/common/Overlay'
 
 export async function getStaticProps({ locale }) {
   return {
@@ -31,7 +30,6 @@ export default function Home() {
       </Head>
 
       <LoadingScreen />
-      <Overlay />
       <Header />
 
       <main className={styles.container}>
@@ -42,6 +40,7 @@ export default function Home() {
         <TestimonialsSection />
         <FooterSection />
       </main>
+      <div id="modal-root"></div>
 
       <footer></footer>
     </div>
