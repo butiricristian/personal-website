@@ -5,7 +5,8 @@ import ContactModal from "./ContactModal";
 export default function ContactButton({className, onClick, children, ...props}) {
   const [showModal, setShowModal] = useState();
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault()
     setShowModal(true)
     onClick && onClick()
   }
