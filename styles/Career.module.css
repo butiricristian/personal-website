@@ -165,4 +165,8 @@
   .sectionTitle {
     margin: 3rem 0 1rem;
   }
+
+  .rightColumn {
+    min-height: 80vh;
+  }
 }
