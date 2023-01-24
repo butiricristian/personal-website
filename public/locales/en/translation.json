@@ -117,7 +117,7 @@
     },
     {
       "name": "eCommerce API",
-      "url": "",
+      "url": "https://github.com/butiricristian/eCommerce-node-acc",
       "image": "apiImage",
       "description":
         "As a participant in Toptal's Node.js accelerator program, I was assigned with building 2 demo eCommerce services: a user authentication service and a product management service",
