@@ -3,10 +3,8 @@ import Button from "./Button";
 import Image from "next/image";
 import logo from "../../public/Cristian B..svg";
 import { useState, useEffect } from "react";
-import clsx from "clsx";
 import Drawer from "./Drawer";
 import { useTranslation } from "next-i18next";
-import { useAppContext } from "../context/state";
 import ContactButton from "../shared/ContactButton";
 
 export const LINKS = [
@@ -15,7 +13,7 @@ export const LINKS = [
   { title: "career", href: "#career" },
   { title: "projects", href: "#projects" },
   { title: "testimonials", href: "#testimonials" },
-  { title: "resume", href: "/resume.pdf", target: '_blank' },
+  { title: "resume", href: "/resume.pdf", target: "_blank" },
 ];
 
 export default function Header() {
@@ -46,7 +44,7 @@ export default function Header() {
 
   async function handleScroll() {
     const currentYOffset = window.pageYOffset;
-    const visible = yOffset > currentYOffset;
+    const visible = yOffset <= 0 || yOffset > currentYOffset;
 
     setYOffset(currentYOffset);
     setVisible(visible);
@@ -62,12 +60,10 @@ export default function Header() {
         <div className={styles.separator} />
         <div className={styles.navContainer}>
           {LINKS.map(navMapper)}
-          <ContactButton className={styles.contact} >
-            Contact
-          </ContactButton>
+          <ContactButton className={styles.contact}>Contact</ContactButton>
         </div>
       </nav>
-      <Drawer burgerButtonProps={{visible}}/>
+      <Drawer burgerButtonProps={{ visible }} />
     </>
   );
 }
