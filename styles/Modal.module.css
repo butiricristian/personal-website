@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 90%;
   max-width: 1000px;
   background-color: white;
   z-index: 251;
@@ -36,4 +36,16 @@
 
 .modalContent {
   padding: 0rem 3rem 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    padding: 1rem;
+    margin: 5rem auto;
+    flex-direction: column;
+  }
+
+  .modalContent {
+    padding: 0rem 1rem 1rem;
+  }
 }

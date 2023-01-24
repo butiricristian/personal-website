@@ -78,6 +78,16 @@
     width: 100%;
   }
 
+  .imageColumn.right {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .imageColumn.left {
+    width: 100%;
+    padding-top: 2rem;
+  }
+
   .descriptionColumn {
     width: 100%;
     padding: 2rem 1rem;

@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
       <div className={styles.carouselContainer}>
         {testimonials.map(testimonialRenderer)}
       </div>
-      <Image src={graphics6} alt="graphics" className={styles.graphics6} />
+      <Image priority src={graphics6} alt="graphics" className={styles.graphics6} />
     </section>
   );
 }

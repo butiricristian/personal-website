@@ -63,7 +63,7 @@
 
 .rightColumn {
   width: 75%;
-  margin-left: 2rem;
+  padding-left: 2rem;
   color: #333;
   position: relative;
   overflow: hidden;
@@ -92,6 +92,14 @@
 
 .scrollContainer {
   width: 25%;
+}
+
+.descriptionContainer {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
+  padding-right: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -147,17 +155,14 @@
   .sectionTitle {
     margin: 5rem 0 1rem;
   }
+
+  .descriptionContainer {
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width: 992px) {
   .sectionTitle {
     margin: 3rem 0 1rem;
   }
-}
-
-.descriptionContainer {
-  position: absolute;
-  background: white;
-  width: 100%;
-  height: 100%;
 }

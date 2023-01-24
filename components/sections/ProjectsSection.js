@@ -7,16 +7,36 @@ import graphics5 from "../../public/graphics/Graphics 5.svg";
 import styles from "../../styles/Projects.module.css";
 import List from "../common/List";
 import { useTranslation } from "next-i18next";
+import clsx from "clsx";
+import { useEffect, useState } from "react";
 
 export default function ProjectsSection() {
   const { t } = useTranslation();
-  const projects = t('projects', { returnObjects: true });
-
+  const projects = t("projects", { returnObjects: true });
   const images = { macbook, iMac, apiImage };
 
+  const [canAlignRight, setCanAlignRight] = useState(true);
+  useEffect(() => {
+    if (typeof window == undefined) return;
+
+    const mql = window.matchMedia("(max-width: 992px)");
+    setCanAlignRight(!mql.matches);
+    mql.addEventListener("change", (e) => setCanAlignRight(!e.matches));
+
+    return () => {
+      mql.removeEventListener("change", () => {});
+    };
+  }, []);
+
   const projectRenderer = (project, index) => {
+    const leftSide = !canAlignRight || index % 2 === 0;
     const img = (
-      <div className={styles.imageColumn}>
+      <div
+        className={clsx(styles.imageColumn, {
+          [styles.left]: leftSide,
+          [styles.right]: !leftSide,
+        })}
+      >
         <Image priority src={images[project.image]} alt="device" />
       </div>
     );
@@ -33,7 +53,7 @@ export default function ProjectsSection() {
       </div>
     );
 
-    if (index % 2 === 0) {
+    if (leftSide) {
       return (
         <div className={styles.twoColumns} key={`project-${index}`}>
           {img}
@@ -52,10 +72,20 @@ export default function ProjectsSection() {
 
   return (
     <section className={styles.container} id="projects">
-      <h4 className={styles.sectionTitle}>{t('header.projects')}</h4>
+      <h4 className={styles.sectionTitle}>{t("header.projects")}</h4>
       {projects.map(projectRenderer)}
-      <Image priority src={graphics4} alt="graphics" className={styles.graphics4} />
-      <Image priority src={graphics5} alt="graphics" className={styles.graphics5} />
+      <Image
+        priority
+        src={graphics4}
+        alt="graphics"
+        className={styles.graphics4}
+      />
+      <Image
+        priority
+        src={graphics5}
+        alt="graphics"
+        className={styles.graphics5}
+      />
     </section>
   );
 }
