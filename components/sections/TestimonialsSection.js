@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
     return () => {
       mql1.removeEventListener('change', () => {})
       mql2.removeEventListener('change', () => {})
-      mql3.removeEventListener('change', () => {})
+      mql3.removeEventListener('change', )
     }
 
   }, [])
@@ -94,7 +94,7 @@ export default function TestimonialsSection() {
         className={styles.graphics6}
       />
       <Modal showModal={showViewMoreModal} setShowModal={setShowViewMoreModal}>
-        {crtTestimonialIndex && (
+        {crtTestimonialIndex !== null && (
           <TestimonialContent
             testimonial={testimonials[crtTestimonialIndex]}
             viewAll={true}
