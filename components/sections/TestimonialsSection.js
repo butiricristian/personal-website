@@ -36,9 +36,9 @@ export default function TestimonialsSection() {
     mql3.addEventListener('change', handler)
 
     return () => {
-      mql1.removeEventListener('change')
-      mql2.removeEventListener('change')
-      mql3.removeEventListener('change')
+      mql1.removeEventListener('change', () => {})
+      mql2.removeEventListener('change', () => {})
+      mql3.removeEventListener('change', () => {})
     }
 
   }, [])

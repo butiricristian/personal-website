@@ -5,6 +5,7 @@ import ziv from "../../public/testimonials/Ziv.png";
 import john from "../../public/testimonials/John.png";
 import jane from "../../public/testimonials/Jane.png";
 import star from "../../public/Star.svg";
+import { useEffect, useState } from "react";
 
 export default function TestimonialContent({ testimonial, onViewMoreClick, viewAll }) {
   const images = { avatar, ziv, john, jane };
@@ -29,9 +30,27 @@ export default function TestimonialContent({ testimonial, onViewMoreClick, viewA
 }
 
 export function Description({ description, onViewMoreClick, viewAll }) {
-  const MAX_DESCRIPTION_LENGTH = 500;
+  const [maxDescriptionLength, setMaxDescriptionLength] = useState(500)
 
-  if (viewAll || description.length < MAX_DESCRIPTION_LENGTH) {
+  useEffect(() => {
+    if (typeof window == undefined) return;
+
+    const mql1 = window.matchMedia('(max-width: 600px)')
+    const handler = () => {
+      if(mql1.matches) setMaxDescriptionLength(400)
+      else setMaxDescriptionLength(500)
+    }
+    handler()
+
+    mql1.addEventListener('change', handler)
+
+    return () => {
+      mql1.removeEventListener('change', () => {})
+    }
+
+  }, [])
+
+  if (viewAll || description.length < maxDescriptionLength) {
     return <em>{description}</em>;
   }
 
@@ -42,7 +61,7 @@ export function Description({ description, onViewMoreClick, viewAll }) {
 
   return (
     <em>
-      {`${description.substring(0, MAX_DESCRIPTION_LENGTH)}... `}
+      {`${description.substring(0, maxDescriptionLength)}... `}
       <span>
         <a href="#" className={styles.viewMore} onClick={handleClick}>
           View More
