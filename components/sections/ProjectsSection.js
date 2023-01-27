@@ -16,6 +16,7 @@ export default function ProjectsSection() {
   const images = { macbook, iMac, apiImage };
 
   const [canAlignRight, setCanAlignRight] = useState(true);
+
   useEffect(() => {
     if (typeof window == undefined) return;
 
@@ -30,6 +31,7 @@ export default function ProjectsSection() {
 
   const projectRenderer = (project, index) => {
     const leftSide = !canAlignRight || index % 2 === 0;
+
     const img = (
       <div
         className={clsx(styles.imageColumn, {
@@ -40,6 +42,7 @@ export default function ProjectsSection() {
         <Image priority src={images[project.image]} alt="device" />
       </div>
     );
+
     const description = (
       <div className={styles.descriptionColumn}>
         <h3>{project.name}</h3>

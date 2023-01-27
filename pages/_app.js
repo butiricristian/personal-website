@@ -6,6 +6,7 @@ import "../styles/Animation.css";
 import { DM_Sans } from '@next/font/google'
 import { appWithTranslation } from 'next-i18next'
 import { AppWrapper } from '../components/context/state';
+import { Analytics } from '@vercel/analytics/react';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
@@ -18,6 +19,7 @@ function App({ Component, pageProps }) {
     <div className={dmSans.className}>
       <AppWrapper>
         <Component {...pageProps} />
+        <Analytics />
       </AppWrapper>
     </div>
   )
