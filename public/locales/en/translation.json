@@ -158,5 +158,40 @@
     "want_to_digitalize_your_business": "Want to digitalize your business?",
     "lets_get_in_touch": "Let's get in touch",
     "made_by": "Made by Cristian Butiri © 2023"
+  },
+  "ancpi": {
+    "state": "state",
+    "from": "from",
+    "to": "to",
+    "sales": "Sales",
+    "mortgages": "Mortgages",
+    "requests": "Requests",
+    "individual_units": "Individual Units",
+    "lands": "Lands",
+    "urban_land_building": "Urban Land (With Building)",
+    "urban_land_without_building": "Urban Land (Without Building)",
+    "outside_the_city_agricultural": "Outside The City Land (Agricultural)",
+    "outside_the_city_non_agricultural": "Outside The City Land (Non-Agricultural)",
+    "active": "Active",
+    "radiated": "Radiated",
+    "information": "Information",
+    "subscription": "Subscription",
+    "reception": "Reception",
+    "other": "Other",
+    "total": "Total",
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
   }
 }

@@ -57,8 +57,8 @@ export default function CareerSection() {
     <section id="career" className={styles.container}>
       <h4 className={styles.sectionTitle}>{t('header.career')}</h4>
       <div className={clsx(styles.container, styles.cardContainer)}>
-        <Image priority src={graphics2} className={styles.graphics2} alt="graphics" />
-        <Image priority src={graphics3} className={styles.graphics3} alt="graphics" />
+        <Image src={graphics2} className={styles.graphics2} alt="graphics" />
+        <Image src={graphics3} className={styles.graphics3} alt="graphics" />
         <Card style={{height: "auto"}}>
           <div className={styles.twoColumns}>
             <div className={styles.scrollContainer}>

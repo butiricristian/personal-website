@@ -13,7 +13,7 @@ export default function FooterSection() {
 
   return (
     <section className={styles.container} id="footer">
-      <Image priority src={graphics8} alt="graphics" className={styles.graphics8} />
+      <Image src={graphics8} alt="graphics" className={styles.graphics8} />
       <div className={styles.content}>
         <h1>{t('footer.want_to_digitalize_your_business')}</h1>
         <ContactButton size="lg">

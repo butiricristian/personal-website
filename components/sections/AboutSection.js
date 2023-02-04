@@ -24,7 +24,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className={styles.container}>
-      <Image priority src={graphics1} className={styles.graphics1} alt="graphics"/>
+      <Image src={graphics1} className={styles.graphics1} alt="graphics"/>
       <Card>
         <Image src={avatar2} alt="avatar" className={styles.avatar} />
         <h4 className={styles.cardTitle}>{t('aboutMe.title')}</h4>

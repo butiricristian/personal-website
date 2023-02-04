@@ -39,7 +39,7 @@ export default function ProjectsSection() {
           [styles.right]: !leftSide,
         })}
       >
-        <Image priority src={images[project.image]} alt="device" />
+        <Image src={images[project.image]} alt="device" />
       </div>
     );
 
@@ -78,13 +78,11 @@ export default function ProjectsSection() {
       <h4 className={styles.sectionTitle}>{t("header.projects")}</h4>
       {projects.map(projectRenderer)}
       <Image
-        priority
         src={graphics4}
         alt="graphics"
         className={styles.graphics4}
       />
       <Image
-        priority
         src={graphics5}
         alt="graphics"
         className={styles.graphics5}

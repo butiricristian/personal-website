@@ -88,7 +88,6 @@ export default function TestimonialsSection() {
         </Swiper>
       </div>
       <Image
-        priority
         src={graphics6}
         alt="graphics"
         className={styles.graphics6}

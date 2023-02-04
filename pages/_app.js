@@ -1,6 +1,7 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import "react-datepicker/dist/react-datepicker.css";
 import '../styles/globals.css';
 import "../styles/Animation.css";
 import { DM_Sans } from '@next/font/google'

@@ -150,5 +150,39 @@
     "want_to_digitalize_your_business": "Vrei sa-ti digitalizezi afacerea?",
     "lets_get_in_touch": "Hai sa discutam",
     "made_by": "Creat de Cristian Butiri © 2023"
+  },
+  "ancpi": {
+    "state": "Judet",
+    "from": "De la",
+    "to": "Pana la",
+    "sales": "Vanzari",
+    "mortgages": "Ipoteci",
+    "requests": "Cereri",
+    "individual_units": "Unitati individuale",
+    "urban_land_building": "Intravilan (Cu Constructie)",
+    "urban_land_without_building": "Intravilan (Fara Constructie)",
+    "outside_the_city_agricultural": "Extravilan (Agricol)",
+    "outside_the_city_non_agricultural": "Extravilan (Neagricol)",
+    "active": "Active",
+    "radiated": "Radiate",
+    "information": "Informare",
+    "subscription": "Inscriere",
+    "reception": "Receptie",
+    "other": "Altele",
+    "total": "Total",
+    "months": [
+      "Ianuarie",
+      "Februarie",
+      "Martie",
+      "Aprilie",
+      "Mai",
+      "Iunie",
+      "Iulie",
+      "August",
+      "Septembrie",
+      "Octombrie",
+      "Noiembrie",
+      "Decembrie"
+    ]
   }
 }
