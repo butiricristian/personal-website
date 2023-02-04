@@ -152,12 +152,15 @@
     "made_by": "Creat de Cristian Butiri © 2023"
   },
   "ancpi": {
+    "title": "Raport ANCPI",
+    "subtitle": "Aceasta pagina prezinta un raport vizual al statisticilor colectate de la ANCPI, privind vanzarile, ipotecile si cererile inregistrate la nivel national si judetean.",
     "state": "Judet",
     "from": "De la",
     "to": "Pana la",
     "sales": "Vanzari",
     "mortgages": "Ipoteci",
-    "requests": "Cereri",
+    "asset_type": "Tip Imobil",
+    "requests": "Tip Cereri",
     "individual_units": "Unitati individuale",
     "urban_land_building": "Intravilan (Cu Constructie)",
     "urban_land_without_building": "Intravilan (Fara Constructie)",

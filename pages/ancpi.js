@@ -120,10 +120,10 @@ export default function Ancpi({ baseUrl }) {
     maxDate = new Date();
   const [startDate, setStartDate] = useState(minDate);
   const [endDate, setEndDate] = useState(maxDate);
-  const [judet, setJudet] = useState("CLUJ");
+  const [judet, setJudet] = useState("TOTAL");
   const [ipoteciActive, setIpoteciActive] = useState(true);
   const [cereriType, setCereriType] = useState("receptie");
-  const [propertyType, setPropertyType] = useState("UnitatiIndividuale");
+  const [propertyType, setPropertyType] = useState("Total");
 
   useEffect(() => {
     const startDateString = translateDateRo(startDate).toLowerCase();
@@ -212,13 +212,15 @@ export default function Ancpi({ baseUrl }) {
   };
 
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: "center"}}>
       <Head>
         <title>Cristian Butiri - Senior Software Engineer</title>
         <link rel="icon" href="/CB.ico" />
       </Head>
 
       <main className={styles.container}>
+        <h1>{t('ancpi.title')}</h1>
+        <p>{t('ancpi.subtitle')}</p>
         <div className={styles.specificFilters}>
           <div>
             <div className={styles.titleContainer}>
@@ -280,7 +282,7 @@ export default function Ancpi({ baseUrl }) {
         <div className={styles.specificFilters}>
           <div>
             <div className={styles.titleContainer}>
-              <h5>{`${t('ancpi.sales')}/${t('ancpi.mortgages')}`}</h5>
+              <h5>{t('ancpi.asset_type')}</h5>
               {/* <div className={styles.colorContainer} style={{backgroundColor: 'var(--secondary)'}}></div> */}
             </div>
             <div className={styles.filtersContainer}>
