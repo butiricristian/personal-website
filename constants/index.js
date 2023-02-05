@@ -54,6 +54,7 @@ export const REQUEST_TYPES = [
   {value: 'informare', label: 'information'},
   {value: 'inscriere', label: 'subscription'},
   {value: 'receptie', label: 'reception'},
+  {value: 'total', label: 'total'},
 ]
 
 export const PROPERTY_TYPES = [
