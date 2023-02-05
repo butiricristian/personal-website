@@ -46,7 +46,7 @@ export async function getStaticProps({ locale }) {
 
 function getBaseUrl() {
   if (process && process.env.NODE_ENV === "production") {
-    return `https://ubiquitous-choux-ec8241.netlify.app/.netlify/functions`;
+    return `https://ancpi-data-provider.netlify.app//.netlify/functions`;
   }
   return `http://localhost:9999/.netlify/functions`;
 }
