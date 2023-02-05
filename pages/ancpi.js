@@ -347,8 +347,9 @@ export default function Ancpi({ baseUrl }) {
             </div>
           </div>
         </div>
+        <ProgressBar visible={loading} barColor="var(--primary)" borderColor="var(--primary)" />
         <div className={styles.chartContainer}>
-          {loading ? <ProgressBar barColor="var(--primary)" borderColor="var(--primary)" /> : (<Line data={data} />)}
+          <Line data={data} />
         </div>
       </main>
     </div>
