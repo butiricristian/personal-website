@@ -24,6 +24,7 @@ import {
   REQUEST_TYPES,
 } from "../constants";
 import { useTranslation } from "next-i18next";
+import { ProgressBar } from 'react-loader-spinner'
 
 ChartJS.register(
   CategoryScale,
@@ -46,7 +47,7 @@ export async function getStaticProps({ locale }) {
 
 function getBaseUrl() {
   if (process && process.env.NODE_ENV === "production") {
-    return `https://ancpi-data-provider.netlify.app//.netlify/functions`;
+    return `https://ancpi-data-provider.netlify.app/.netlify/functions`;
   }
   return `http://localhost:9999/.netlify/functions`;
 }
@@ -136,8 +137,10 @@ export default function Ancpi({ baseUrl }) {
   const [ipoteciActive, setIpoteciActive] = useState(true);
   const [cereriType, setCereriType] = useState("receptie");
   const [propertyType, setPropertyType] = useState("Total");
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
     const startDateString = translateDateRo(startDate).toLowerCase();
     const endDateString = translateDateRo(endDate).toLowerCase();
     const params = {
@@ -158,6 +161,7 @@ export default function Ancpi({ baseUrl }) {
       setCereri(cereriData);
       setVanzari(vanzariData);
       setIpoteci(ipoteciData);
+      setLoading(false)
     };
     req();
   }, [startDate, endDate, judet, cereriType, ipoteciActive]);
@@ -346,7 +350,7 @@ export default function Ancpi({ baseUrl }) {
           </div>
         </div>
         <div className={styles.chartContainer}>
-          <Line data={data} />
+          {loading ? <ProgressBar barColor="var(--primary)" borderColor="var(--primary)" /> : (<Line data={data} />)}
         </div>
       </main>
 

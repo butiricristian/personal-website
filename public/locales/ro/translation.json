@@ -126,6 +126,18 @@
         "The products service was created with Node.js, Nest and MongoDB as a database",
         "Both services were exposing REST APIs documented with the help of Swagger"
       ]
+    },
+    {
+      "name": "Agregator Date ANCPI",
+      "url": "https://cristianbutiri.com/ro/ancpi",
+      "image": "chart",
+      "description":
+        "The Romanian Government provides monthly statistics regarding sales, mortgages and requests data. This informations is provided in excel files and it makes it difficult to spot trends. So I thought about building a scraper to transform the data into JSON and display it in a customizable Chart.",
+      "items": [
+        "The scraper was created with Go and deployed using Netlify Lamdba Functions",
+        "Grabbing the excel download URLs and scraping the files utilizes Goroutines and Channels",
+        "The chart is integrated inside my personal website and uses ReactChart and Chart-js2"
+      ]
     }
   ],
   "testimonials": [

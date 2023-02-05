@@ -108,11 +108,11 @@
       "url": "",
       "image": "macbook",
       "description":
-        "Flourish was created as a replacement for a company's service that used to manage campaigns and offers for mobile games and apps. The project was designed and built by me to help the company I was working for with their business",
+        "Flourish was created as a replacement for a company's service that used to manage campaigns and offers for mobile games and apps. The project was designed and built by me to help the company I was working for with their business.",
       "items": [
         "Created with Ruby on Rails 6 for the back-end and React for the front-end",
         "Integrated with a legacy systems by using AWS's SQS queing system",
-        "Built a real-time notification system for the users to know when their offers or campaings stopped working"
+        "Built a real-time notification system for the users to know when their offers or campaings stopped working."
       ]
     },
     {
@@ -120,11 +120,23 @@
       "url": "https://github.com/butiricristian/eCommerce-node-acc",
       "image": "apiImage",
       "description":
-        "As a participant in Toptal's Node.js accelerator program, I was assigned with building 2 demo eCommerce services: a user authentication service and a product management service",
+        "As a participant in Toptal's Node.js accelerator program, I was assigned with building 2 demo eCommerce services: a user authentication service and a product management service.",
       "items": [
         "The user service was built using Node.js, Express and Auth0 as an authentication server",
         "The products service was created with Node.js, Nest and MongoDB as a database",
         "Both services were exposing REST APIs documented with the help of Swagger"
+      ]
+    },
+    {
+      "name": "Real Estate Data Scraper",
+      "url": "https://cristianbutiri.com/ancpi",
+      "image": "chart",
+      "description":
+        "The Romanian Government provides monthly statistics regarding sales, mortgages and requests data. This informations is provided in excel files and it makes it difficult to spot trends. So I thought about building a scraper to transform the data into JSON and display it in a customizable Chart.",
+      "items": [
+        "The scraper was created with Go and deployed using Netlify Lamdba Functions",
+        "Grabbing the excel download URLs and scraping the files utilizes Goroutines and Channels",
+        "The chart is integrated inside my personal website and uses ReactChart and Chart-js2"
       ]
     }
   ],

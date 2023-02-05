@@ -2,6 +2,7 @@ import Image from "next/image";
 import iMac from "../../public/tools/iMac.svg";
 import macbook from "../../public/tools/Macbook.svg";
 import apiImage from "../../public/tools/API.svg";
+import chart from "../../public/tools/Chart.svg";
 import graphics4 from "../../public/graphics/Graphics 4.svg";
 import graphics5 from "../../public/graphics/Graphics 5.svg";
 import styles from "../../styles/Projects.module.css";
@@ -13,7 +14,7 @@ import { useEffect, useState } from "react";
 export default function ProjectsSection() {
   const { t } = useTranslation();
   const projects = t("projects", { returnObjects: true });
-  const images = { macbook, iMac, apiImage };
+  const images = { macbook, iMac, apiImage, chart };
 
   const [canAlignRight, setCanAlignRight] = useState(true);
 
