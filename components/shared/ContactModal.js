@@ -3,10 +3,12 @@ import Modal from "../common/Modal";
 import facebook from "../../public/social/FacebookBlack.svg";
 import linkedin from "../../public/social/LinkedInBlack.svg";
 import mail from "../../public/social/Mail.svg";
+import calendly from "../../public/social/Calendly.svg"
 import Image from "next/image";
 
 export default function ContactModal({showModal, setShowModal}) {
   const contactMethods = [
+    { name: "Schedule a call", icon: calendly, url: "https://calendly.com/butiri-cristian" },
     { name: "Mail", icon: mail, url: 'mailto:butiri.cristian@gmail.com' },
     { name: "Facebook", icon: facebook, url: "https://www.facebook.com/butiri.cristian"},
     { name: "LinkedIn", icon: linkedin, url: "https://www.linkedin.com/in/cristian-butiri-614598127/" },
@@ -19,7 +21,7 @@ export default function ContactModal({showModal, setShowModal}) {
 
     return (
       <div className={styles.contactContainer} key={name} onClick={redirectToLink}>
-        <Image src={icon} alt="social" />
+        <Image src={icon} alt="social" width={50} />
         <h5>{name}</h5>
       </div>
     );

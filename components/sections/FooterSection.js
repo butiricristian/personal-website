@@ -7,18 +7,20 @@ import figma from "../../public/social/Figma.svg";
 import styles from "../../styles/Footer.module.css";
 import ContactButton from "../shared/ContactButton";
 import { useTranslation } from "next-i18next";
+import { InlineWidget } from "react-calendly";
 
 export default function FooterSection() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <section className={styles.container} id="footer">
       <Image src={graphics8} alt="graphics" className={styles.graphics8} />
       <div className={styles.content}>
-        <h1>{t('footer.want_to_digitalize_your_business')}</h1>
-        <ContactButton size="lg">
-          {t('footer.lets_get_in_touch')}
-        </ContactButton>
+        <h1>{t("footer.want_to_digitalize_your_business")}</h1>
+        <ContactButton size="lg">{t("footer.lets_get_in_touch")}</ContactButton>
+        {/* <div style={{width: '100%', height: '700px'}}>
+          <InlineWidget url="https://calendly.com/butiri-cristian" styles={{width: '100%', height: '100%'}}/>
+        </div> */}
         <div className={styles.social}>
           <a href="https://www.facebook.com/butiri.cristian">
             <Image src={facebook} alt="facebook" />
@@ -34,7 +36,7 @@ export default function FooterSection() {
           </a>
         </div>
         <div className={styles.copyright}>
-          <h4>{t('footer.made_by')}</h4>
+          <h4>{t("footer.made_by")}</h4>
         </div>
       </div>
     </section>

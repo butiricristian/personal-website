@@ -238,25 +238,23 @@ export default function Ancpi({ baseUrl }) {
         <h1>{t('ancpi.title')}</h1>
         <p>{t('ancpi.subtitle')}</p>
         <div className={styles.specificFilters}>
-          <div>
+          <div className={styles.titleAndFilter}>
             <div className={styles.titleContainer}>
               <h5>{t("ancpi.state")}</h5>
             </div>
             <div className={styles.filtersContainer}>
-              <div>
-                <Select
-                  options={JUDETE.map((j) => ({ value: j, label: j }))}
-                  className={styles.select}
-                  styles={selectStyles}
-                  isSearchable
-                  onChange={({ value }) => setJudet(value)}
-                  defaultValue={{ value: judet, label: judet }}
-                  placeholder={t("ancpi.state")}
-                />
-              </div>
+              <Select
+                options={JUDETE.map((j) => ({ value: j, label: j }))}
+                className={styles.select}
+                styles={selectStyles}
+                isSearchable
+                onChange={({ value }) => setJudet(value)}
+                defaultValue={{ value: judet, label: judet }}
+                placeholder={t("ancpi.state")}
+              />
             </div>
           </div>
-          <div>
+          <div className={styles.titleAndFilter}>
             <div className={styles.titleContainer}>
               <h5>{t("ancpi.from")}</h5>
             </div>
@@ -275,7 +273,7 @@ export default function Ancpi({ baseUrl }) {
               />
             </div>
           </div>
-          <div>
+          <div className={styles.titleAndFilter}>
             <div className={styles.titleContainer}>
               <h5>{t("ancpi.to")}</h5>
             </div>
@@ -296,7 +294,7 @@ export default function Ancpi({ baseUrl }) {
           </div>
         </div>
         <div className={styles.specificFilters}>
-          <div>
+          <div className={styles.titleAndFilter}>
             <div className={styles.titleContainer}>
               <h5>{t('ancpi.asset_type')}</h5>
               {/* <div className={styles.colorContainer} style={{backgroundColor: 'var(--secondary)'}}></div> */}
@@ -314,7 +312,7 @@ export default function Ancpi({ baseUrl }) {
               />
             </div>
           </div>
-          <div>
+          <div className={styles.titleAndFilter}>
             <div className={styles.titleContainer}>
               <h5>{t('ancpi.mortgages')}</h5>
             </div>
@@ -331,7 +329,7 @@ export default function Ancpi({ baseUrl }) {
               />
             </div>
           </div>
-          <div>
+          <div className={styles.titleAndFilter}>
             <div className={styles.titleContainer}>
               <h5>{t('ancpi.request_type')}</h5>
             </div>
@@ -353,9 +351,6 @@ export default function Ancpi({ baseUrl }) {
           {loading ? <ProgressBar barColor="var(--primary)" borderColor="var(--primary)" /> : (<Line data={data} />)}
         </div>
       </main>
-
-      <div id="modal-root"></div>
-      <footer></footer>
     </div>
   );
 }
