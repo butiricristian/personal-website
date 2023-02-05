@@ -105,7 +105,19 @@ function translateDate(dateString, t) {
 }
 
 function translateConsts(constToTranslate, t) {
-  return constToTranslate.map(x => ({...x, label: t(`ancpi.${x.label}`)}))
+  return constToTranslate.map(x => {
+    if (x.options) {
+      return {
+        ...x,
+        label: t(`ancpi.${x.label}`),
+        options: translateConsts(x.options, t),
+      }
+    }
+    return {
+      ...x,
+      label: t(`ancpi.${x.label}`),
+    }
+  })
 }
 
 
@@ -317,7 +329,7 @@ export default function Ancpi({ baseUrl }) {
           </div>
           <div>
             <div className={styles.titleContainer}>
-              <h5>{t('ancpi.requests')}</h5>
+              <h5>{t('ancpi.request_type')}</h5>
             </div>
             <div className={styles.filtersContainer}>
               <Select
